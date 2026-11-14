@@ -1,0 +1,35 @@
+{
+  "test_suite": {
+    "command": [
+      "C:\\Users\\AMAN KUMAR THAKUR\\Downloads\\PMRC-Net-Research\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 17.03837540000677,
+    "test_count": 13,
+    "framework_duration_seconds": 4.105,
+    "skipped_count": 0,
+    "summary_found": true,
+    "output_indicates_success": true,
+    "status": "PASS"
+  },
+  "legacy_setup": {
+    "command": [
+      "C:\\Users\\AMAN KUMAR THAKUR\\Downloads\\PMRC-Net-Research\\.venv\\Scripts\\python.exe",
+      "test_setup.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 18.685451400000602,
+    "test_count": null,
+    "framework_duration_seconds": null,
+    "skipped_count": 0,
+    "summary_found": false,
+    "output_indicates_success": false,
+    "status": "PASS"
+  }
+}

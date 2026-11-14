@@ -1,0 +1,42 @@
+seed: 42
+data:
+  path: dataset/cleaned_merged_heart_dataset.csv
+  target: target
+  deduplicate_exact_rows: true
+  continuous_cols: [age, trestbps, chol, thalachh, oldpeak]
+  categorical_cols: [sex, cp, fbs, restecg, exang, slope, ca, thal]
+  physiology_cols: [age, thalachh, oldpeak, exang]
+  pathway_map:
+    metabolic: [age, sex, trestbps, chol, fbs]
+    exercise: [thalachh, oldpeak, exang, slope]
+    coronary: [cp, restecg, ca, thal]
+model:
+  hidden_dim: 16
+  dropout: 0.1
+  coupling: asymmetric
+  embedding_cardinality: 10
+loss:
+  l1_lambda: 0.01
+  l2_lambda: 0.01
+  phys_lambda: 0.1
+training:
+  epochs: 100
+  batch_size: 8
+  allowed_batch_sizes: [8, 4, 2]
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 12
+  min_delta: 0.0001
+  gradient_clip_norm: 1.0
+  folds: 5
+  num_workers: 0
+  cpu_threads: 2
+  mixed_precision: true
+  checkpoint_every: 1
+  max_steps_per_epoch: null
+hardware:
+  device: auto
+  max_gpu_memory_gb: 2.5
+  sequential_only: true
+  pin_memory: false
+  persistent_workers: false

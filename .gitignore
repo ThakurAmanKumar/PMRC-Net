@@ -1,0 +1,51 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+
+# Raw or patient-level data
+dataset/
+data/
+raw_data/
+patient_data/
+**/predictions/
+**/oof_predictions*.csv
+**/fold_assignments.json
+**/*patient*
+**/*PATIENT*
+
+# Generated models and experiment outputs
+checkpoints/
+**/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+catboost_info/
+results/
+experiments/*
+reports/*
+!experiments/.gitkeep
+!reports/.gitkeep
+
+# Temporary files and logs
+*.log
+*.tmp
+*.temp
+*.swp
+qa_gate_run.txt
+.DS_Store
+Thumbs.db

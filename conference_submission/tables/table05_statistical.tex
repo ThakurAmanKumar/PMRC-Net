@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrr}
+\toprule
+Comparison & Metric & Pairs & Two-sided p & Interpretation / limitation \\
+\midrule
+Directional vs single-flow & Accuracy & 5 & 0.1250 & Exploratory; no correction for multiple metrics \\
+Directional vs single-flow & ROC-AUC & 5 & 0.4375 & Exploratory; no correction for multiple metrics \\
+Directional vs single-flow & Average precision & 5 & 1.0000 & Exploratory; no correction for multiple metrics \\
+Directional vs single-flow & Brier score & 5 & 0.4375 & Exploratory; no correction for multiple metrics \\
+Directional vs single-flow & ECE & 5 & 0.1250 & Exploratory; no correction for multiple metrics \\
+Directional vs historical baseline & ROC-AUC (nominal) & 5 & 0.0625 & Not confirmatory: baseline selected epochs on outer validation \\
+\bottomrule
+\end{tabular}

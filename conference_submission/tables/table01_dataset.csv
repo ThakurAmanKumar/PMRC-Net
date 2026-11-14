@@ -1,0 +1,10 @@
+Characteristic,Value,Notes
+Raw rows,"1,888",Merged CSV; provenance and patient identifiers unavailable
+Exact duplicate rows removed,"1,286",Exact-row deduplication only
+Rows after deduplication,602,No claim of unique patients
+Predictors,"13 (5 continuous, 8 categorical)",Target excluded
+Raw target counts,0: 911; 1: 977,Target coding retained as stored
+Deduplicated target counts,0: 310; 1: 292,602 total rows
+Missing cells,0,No missing values in the source CSV
+ca = 4,28 raw; 5 after deduplication,Loader preserves category 4; it is not imputed or mapped to missing
+Dataset SHA-256,a786b4a0...7ad42b90,Full hash is recorded in run_config.json and the repository audit

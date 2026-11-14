@@ -1,0 +1,10 @@
+metric,pmrc_estimate,random_forest_estimate,difference_pmrc_minus_random_forest,source
+roc_auc,0.8955258506407423,0.8797669023420238,0.01575894829871849,"keyed merge on sample_index, fold, target"
+average_precision,0.8909001497147407,0.8763758828977343,0.01452426681700647,"keyed merge on sample_index, fold, target"
+brier_score,0.13072432114992258,0.14288492524916946,-0.01216060409924688,"keyed merge on sample_index, fold, target"
+accuracy,0.8255813953488372,0.7973421926910299,0.028239202657807327,"keyed merge on sample_index, fold, target"
+precision,0.8303886925795053,0.8014184397163121,0.028970252863193213,"keyed merge on sample_index, fold, target"
+sensitivity,0.8047945205479452,0.773972602739726,0.03082191780821919,"keyed merge on sample_index, fold, target"
+specificity,0.8451612903225807,0.8193548387096774,0.02580645161290329,"keyed merge on sample_index, fold, target"
+f1,0.8173913043478261,0.7874564459930313,0.029934858354794813,"keyed merge on sample_index, fold, target"
+mcc,0.6508299710827162,0.5942472276488238,0.05658274343389247,"keyed merge on sample_index, fold, target"

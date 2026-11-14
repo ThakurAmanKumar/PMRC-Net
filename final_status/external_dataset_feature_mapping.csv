@@ -1,0 +1,27 @@
+candidate,local_feature,candidate_feature,compatibility,verified_from_downloaded_data,used_for_validation
+UCI Heart Disease,age,age,name-level match only,False,False
+UCI Heart Disease,sex,sex,definition/coding not verified,False,False
+UCI Heart Disease,cp,chest-pain,coding not verified,False,False
+UCI Heart Disease,trestbps,rest-bp,units/source not verified,False,False
+UCI Heart Disease,chol,serum-chol,units/source not verified,False,False
+UCI Heart Disease,fbs,fasting-blood-sugar,coding not verified,False,False
+UCI Heart Disease,restecg,electrocardiographic,coding not verified,False,False
+UCI Heart Disease,thalachh,max-heart-rate,local rename only; source identity not verified,False,False
+UCI Heart Disease,exang,angina,coding not verified,False,False
+UCI Heart Disease,oldpeak,oldpeak,name-level match only,False,False
+UCI Heart Disease,slope,slope,coding not verified,False,False
+UCI Heart Disease,ca,major-vessels,missingness/definition not verified,False,False
+UCI Heart Disease,thal,thal,coding not verified,False,False
+Statlog Heart,age,age,name-level match only,False,False
+Statlog Heart,sex,sex,definition/coding not verified,False,False
+Statlog Heart,cp,chest-pain,coding not verified,False,False
+Statlog Heart,trestbps,rest-bp,units/source not verified,False,False
+Statlog Heart,chol,serum-chol,units/source not verified,False,False
+Statlog Heart,fbs,fasting-blood-sugar,coding not verified,False,False
+Statlog Heart,restecg,electrocardiographic,coding not verified,False,False
+Statlog Heart,thalachh,max-heart-rate,local rename only; source identity not verified,False,False
+Statlog Heart,exang,angina,coding not verified,False,False
+Statlog Heart,oldpeak,oldpeak,name-level match only,False,False
+Statlog Heart,slope,slope,coding not verified,False,False
+Statlog Heart,ca,major-vessels,missingness/definition not verified,False,False
+Statlog Heart,thal,thal,coding not verified,False,False

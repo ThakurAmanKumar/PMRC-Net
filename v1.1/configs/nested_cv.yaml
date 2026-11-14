@@ -1,0 +1,52 @@
+version: "1.1"
+seed: 42
+seeds: [21, 42, 123, 2026, 3407]
+data:
+  path: ../dataset/cleaned_merged_heart_dataset.csv
+  target: target
+  deduplicate_exact_rows: true
+  continuous_cols: [age, trestbps, chol, thalachh, oldpeak]
+  categorical_cols: [sex, cp, fbs, restecg, exang, slope, ca, thal]
+  physiology_cols: [age, thalachh, oldpeak, exang]
+  category_values:
+    sex: [0, 1]
+    cp: [0, 1, 2, 3]
+    fbs: [0, 1]
+    restecg: [0, 1, 2]
+    exang: [0, 1]
+    slope: [0, 1, 2, 3]
+    ca: [0, 1, 2, 3, 4]
+    thal: [0, 3, 6, 7]
+  pathway_map:
+    metabolic: [age, sex, trestbps, chol, fbs]
+    exercise: [thalachh, oldpeak, exang, slope]
+    coronary: [cp, restecg, ca, thal]
+model:
+  hidden_dim: 16
+  dropout: 0.1
+  coupling: asymmetric
+  embedding_cardinality: 10
+loss:
+  objective: binary_cross_entropy_with_logits
+training:
+  outer_folds: 5
+  inner_folds: 4
+  max_epochs: 100
+  batch_size: 8
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 12
+  min_delta: 0.0001
+  gradient_clip_norm: 1.0
+  num_workers: 0
+  cpu_threads: 2
+  mixed_precision: false
+  precision: fp32
+hardware:
+  device: auto
+  sequential_only: true
+  pin_memory: false
+statistics:
+  bootstrap_repetitions: 1000
+  bootstrap_seed: 20261108
+  ece_bins: 10

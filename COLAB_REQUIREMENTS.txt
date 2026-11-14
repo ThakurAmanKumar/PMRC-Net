@@ -1,0 +1,8 @@
+# Core packages used by the notebook. Google Colab normally preinstalls these.
+# Do not run pip install --upgrade; keep the Colab PyTorch/CUDA build intact.
+numpy
+pandas
+scikit-learn
+matplotlib
+torch
+ipython

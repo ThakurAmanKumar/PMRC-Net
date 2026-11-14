@@ -1,0 +1,70 @@
+{
+  "seed": 3407,
+  "fold": 5,
+  "train_rows": 482,
+  "outer_test_rows": 120,
+  "selected_epochs": 10,
+  "selection": {
+    "selection_metric": "inner_validation_binary_cross_entropy",
+    "aggregation": "ceiling of median inner-fold best epoch",
+    "inner_best_epochs": [
+      7,
+      20,
+      13,
+      3
+    ],
+    "selected_epochs": 10,
+    "inner_folds": [
+      {
+        "inner_fold": 1,
+        "train_rows": 361,
+        "valid_rows": 121,
+        "best_epoch": 7,
+        "best_validation_bce": 0.44349004611496096
+      },
+      {
+        "inner_fold": 2,
+        "train_rows": 361,
+        "valid_rows": 121,
+        "best_epoch": 20,
+        "best_validation_bce": 0.3653016292359218
+      },
+      {
+        "inner_fold": 3,
+        "train_rows": 362,
+        "valid_rows": 120,
+        "best_epoch": 13,
+        "best_validation_bce": 0.4087974488735199
+      },
+      {
+        "inner_fold": 4,
+        "train_rows": 362,
+        "valid_rows": 120,
+        "best_epoch": 3,
+        "best_validation_bce": 0.5663351535797119
+      }
+    ]
+  },
+  "outer_train_loss_at_selected_epoch": 0.37331914005190503,
+  "outer_metrics": {
+    "threshold": 0.5,
+    "accuracy": 0.8583333333333333,
+    "precision": 0.847457627118644,
+    "sensitivity": 0.8620689655172413,
+    "specificity": 0.8548387096774194,
+    "f1": 0.8547008547008547,
+    "mcc": 0.7166088183727276,
+    "roc_auc": 0.9463292547274751,
+    "average_precision": 0.9443479753897865,
+    "brier_score": 0.09666230723951869,
+    "ece": 0.08065266145555748,
+    "tn": 53,
+    "fp": 9,
+    "fn": 8,
+    "tp": 50
+  },
+  "checkpoint": "checkpoints\\nested_5seed_4inner_20261107\\seed_3407\\fold_5.pt",
+  "prediction_file": "predictions\\nested_5seed_4inner_20261107\\seed_3407\\fold_5_oof.csv",
+  "elapsed_seconds": 115.29014749987982,
+  "outer_test_used_for_selection": false
+}

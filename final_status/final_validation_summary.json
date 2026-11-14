@@ -1,0 +1,114 @@
+{
+  "status": "INCONCLUSIVE",
+  "overall_project_status": "INCONCLUSIVE",
+  "clinical_readiness": "NOT ESTABLISHED",
+  "dataset": {
+    "rows_after_exact_deduplication": 602,
+    "sha256": "a786b4a01e306cd892293c2671e15f29a29a17d06c69b16b19906a337ad42b90",
+    "duplicate_analysis": {
+      "raw_rows": 1888,
+      "exact_duplicate_rows": 1286,
+      "exact_unique_rows": 602,
+      "feature_duplicate_rows": 1588,
+      "feature_duplicate_groups": 302,
+      "conflicting_target_groups": 0,
+      "near_duplicate_candidate_pairs": 3453,
+      "standardization": "Column-wise z-score: subtract the full dataset column mean and divide by population standard deviation (ddof=0); zero-variance columns map to zero.",
+      "near_duplicate_distance": "Euclidean distance <= 0.1 across the five standardized continuous columns",
+      "categorical_match": "Exact match on all 8 configured categorical columns"
+    },
+    "near_duplicate_calculation_note": "The prior report's near-duplicate value was hard-coded and is superseded by the computed candidate-pair count in this report.",
+    "expected_duplicate_counts": {
+      "raw_rows": 1888,
+      "exact_duplicate_rows": 1286,
+      "exact_unique_rows": 602,
+      "feature_duplicate_rows": 1588,
+      "feature_duplicate_groups": 302,
+      "conflicting_target_groups": 0
+    },
+    "duplicate_count_discrepancies": {}
+  },
+  "stage4_2_alignment": {
+    "pmrc_source": "results/stage2_validation/oof_predictions.csv",
+    "random_forest_source": "results/stage4_2_baseline_comparison/random_forest_oof_aligned.csv",
+    "alignment_key": [
+      "sample_index",
+      "fold",
+      "target"
+    ],
+    "pmrc_rows": 602,
+    "random_forest_rows": 602,
+    "aligned_rows": 602,
+    "sample_index_sets_identical": true,
+    "folds_and_targets_key_aligned": true,
+    "status": "PASS"
+  },
+  "stage4_2_metrics": {
+    "pmrc_roc_auc": 0.8955258506407423,
+    "random_forest_roc_auc": 0.8797669023420238,
+    "roc_auc_difference": 0.01575894829871849,
+    "average_precision_difference": 0.01452426681700647,
+    "brier_difference": -0.012160604099246908,
+    "roc_auc_bootstrap_interval": [
+      0.0009090532479009,
+      0.0312640852850198
+    ]
+  },
+  "five_seed_summary": {
+    "roc_auc": {
+      "mean": 0.8966129032258063,
+      "std": 0.0049808764784371
+    },
+    "accuracy": {
+      "mean": 0.8149501661129568,
+      "std": 0.0085188580763841
+    },
+    "f1": {
+      "mean": 0.8065208250456166,
+      "std": 0.0089768104922212
+    },
+    "mcc": {
+      "mean": 0.6295792442824439,
+      "std": 0.0170559342426498
+    },
+    "brier_score": {
+      "mean": 0.1313092132640377,
+      "std": 0.0024713712700289
+    }
+  },
+  "tests": {
+    "unittest": "PASS",
+    "exit_code": 0,
+    "tests": 13,
+    "duration_seconds": 4.105,
+    "elapsed_seconds": 17.03837540000677,
+    "skipped": 0,
+    "cuda_test": "PASS",
+    "legacy_setup_direct_exit_code": 0
+  },
+  "external_validation": "BLOCKED",
+  "patient_independence": "INCONCLUSIVE",
+  "evidence_checks": {
+    "dataset_hash": true,
+    "raw_dataset_rows_match": true,
+    "dataset_counts_match_documented_expectations": true,
+    "near_duplicate_calculation": true,
+    "stage4_2_alignment": true,
+    "corrected_metrics": true,
+    "five_seed_summary": true,
+    "checkpoint_hash": true,
+    "stage5_dataset_hash": true,
+    "automated_test_log": true,
+    "automated_test_exit_code": true,
+    "automated_test_duration_recorded": true,
+    "legacy_setup_log": true,
+    "external_not_evaluated": true,
+    "external_dataset_screening_evidence": true,
+    "required_output_files": true,
+    "json_outputs_valid": true,
+    "csv_outputs_valid": true,
+    "referenced_evidence_paths": true,
+    "inventory_integrity": true
+  },
+  "evidence_validation_status": "PASS"
+}

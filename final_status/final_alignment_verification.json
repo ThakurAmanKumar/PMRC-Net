@@ -1,0 +1,15 @@
+{
+  "pmrc_source": "results/stage2_validation/oof_predictions.csv",
+  "random_forest_source": "results/stage4_2_baseline_comparison/random_forest_oof_aligned.csv",
+  "alignment_key": [
+    "sample_index",
+    "fold",
+    "target"
+  ],
+  "pmrc_rows": 602,
+  "random_forest_rows": 602,
+  "aligned_rows": 602,
+  "sample_index_sets_identical": true,
+  "folds_and_targets_key_aligned": true,
+  "status": "PASS"
+}

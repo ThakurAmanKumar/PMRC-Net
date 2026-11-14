@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the repository and the saved research paper when using PMRC-Net."
+title: "PMRC-Net Research Project"
+type: software
+version: 1.0.0
+date-released: 2026-11-07
+abstract: "Research implementation and internal validation artifacts for a physiologically structured neural network study."
+keywords:
+  - heart disease
+  - tabular deep learning
+  - reproducibility
+  - out-of-fold validation
+# Add verified author and repository metadata before public release.

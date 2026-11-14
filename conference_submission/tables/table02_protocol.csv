@@ -1,0 +1,15 @@
+Setting,Value
+Outer/inner CV,5 outer folds; 4 inner folds
+Seeds,"21, 42, 123, 2026, 3407"
+Batch size / precision,16 / FP32
+Device,NVIDIA GeForce RTX 2050 (4096 MiB); CUDA 12.8
+CPU / data workers,2 threads; 1 inter-op; 0 workers
+Optimizer,AdamW; fold-local standardization; max epochs 30; patience 8; gradient clip 1.0
+Candidate grid,3 candidates; see supplementary/run_config.json
+Selection score,mean inner-fold ROC-AUC + 0.5 * MCC
+Calibration and threshold,Scalar temperature and Youden J threshold from selected-candidate inner OOF only
+Outer evaluation,One evaluation per outer test fold; 25 outer folds per arm
+Measured wall time,2.45 h (8831.9 s)
+Max system RAM,91.3% (1696 MiB peak process RSS)
+GPU temperature / utilization,60 °C maximum; 78% max utilization
+Runtime versions,Python 3.11.9; PyTorch 2.11.0+cu128; CUDA 12.8; NumPy 2.4.6; pandas 2.3.3; scikit-learn 1.9.1; SciPy 1.17.1; Matplotlib 3.11.2; NetworkX 3.6.1; PyYAML 6.0.3

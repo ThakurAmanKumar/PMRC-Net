@@ -1,0 +1,11 @@
+Metric,Directional - single-flow,Exact paired p,Direction
+Accuracy,+0.0126,0.1250,Higher is better
+Precision,+0.0234,0.1875,Higher is better
+Sensitivity,-0.0048,1.0000,Higher is better
+Specificity,+0.0290,0.3125,Higher is better
+F1,+0.0089,0.3125,Higher is better
+MCC,+0.0253,0.1250,Higher is better
+ROC-AUC,+0.0017,0.4375,Higher is better
+Average precision,-0.0015,1.0000,Higher is better
+Brier score,-0.0017,0.4375,Lower is better
+ECE,-0.0067,0.1250,Lower is better
